@@ -73,7 +73,9 @@ const Service = () => {
             key={index}
           >
             {item.icon}
-            <span className="text-balance text-center">{item.text}</span>
+            <span className="text-balance text-lg text-center">
+              {item.text}
+            </span>
           </motion.li>
         ))}
       </motion.ul>

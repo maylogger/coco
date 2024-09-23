@@ -18,8 +18,9 @@ export default function Home() {
               <span className="text-4xl font-semibold text-center text-white">
                 查理 Repair 當面維修
               </span>
-              <span className="text-base text-center mt-2">
-                Apple iPhone iPad 維修 - 林口 iPhone 維修
+              <span className="text-lg text-center mt-2">
+                Apple iPhone iPad 維修 -{" "}
+                <span className="inline-block">林口 iPhone 維修</span>
               </span>
             </h1>
           </section>
@@ -27,7 +28,7 @@ export default function Home() {
           <Service />
           <section className="container mx-auto p-5">
             <h2 className="text-2xl font-semibold text-center">地址 & 電話</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
+            <div className="grid grid-cols-1 auto-rows-fr sm:grid-cols-2 gap-5 mt-10">
               <Link
                 href="https://maps.app.goo.gl/wjADk7ahCG3MCvrB6"
                 target="_blank"

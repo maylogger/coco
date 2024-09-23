@@ -39,8 +39,10 @@ const Feature = () => {
 
   return (
     <section className="container mx-auto p-5">
-      <h2 className="text-center text-balance text-xl">
-        查理維修提供 iPhone 當面維修服務，包括螢幕維修、電池更換、相機維修等
+      <h2 className="text-center text-balance text-2xl font-semibold [&>span]:inline-block">
+        查理維修提供 iPhone 當面維修服務，<span>包括螢幕維修、</span>
+        <span>電池更換、</span>
+        <span>相機維修等</span>
       </h2>
       <motion.ul
         ref={ref}
@@ -56,7 +58,9 @@ const Feature = () => {
             key={index}
           >
             {item.icon}
-            <span className="text-balance text-center">{item.text}</span>
+            <span className="text-balance text-lg text-center">
+              {item.text}
+            </span>
           </motion.li>
         ))}
       </motion.ul>
