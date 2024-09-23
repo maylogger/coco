@@ -16,7 +16,7 @@ export default function Home() {
           <section className="container mx-auto p-5">
             <h1 className="flex flex-col items-center justify-center">
               <span className="text-4xl font-semibold text-center text-white">
-                查理 Repair 當面維修
+                查理 Repair <span className="inline-block">當面維修</span>
               </span>
               <span className="text-lg text-center mt-2">
                 Apple iPhone iPad 維修 -{" "}
