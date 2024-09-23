@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="relative z-10 pt-[200px] mt-[-250px]">
-        <div className="absolute z-0 inset-0 backdrop-blur-[50px] backdrop-brightness-50 backdrop-saturate-200 [mask-image:linear-gradient(to_bottom,transparent_0,black_200px)]"></div>
+      <div className="relative z-10 mt-[-50px]">
+        <div className="absolute z-0 inset-0 top-[-200px] pointer-events-none backdrop-blur-[50px] backdrop-brightness-50 backdrop-saturate-200 [mask-image:linear-gradient(to_bottom,transparent_0,black_200px)]"></div>
         <div className="relative z-10">
           <section className="container mx-auto p-5">
             <h1 className="flex flex-col items-center justify-center">

@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <motion.section
       style={{ translateY: cocoScroll }}
-      className="h-[300px] sm:h-[600px] relative z-0"
+      className="h-[600px] relative z-0"
     >
       <Spline
         scene="https://prod.spline.design/44j7MuFZaFW9zhcB/scene.splinecode"
