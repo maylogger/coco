@@ -1,101 +1,62 @@
-import Image from "next/image";
+import Link from "next/link";
+
+import { MapPin, PhoneCall } from "lucide-react";
+
+import Header from "./header";
+import Feature from "./feature";
+import Service from "./service";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <Header />
+      <div className="relative z-10 pt-[200px] mt-[-250px]">
+        <div className="absolute z-0 inset-0 backdrop-blur-[50px] backdrop-brightness-50 backdrop-saturate-200 [mask-image:linear-gradient(to_bottom,transparent_0,black_200px)]"></div>
+        <div className="relative z-10">
+          <section className="container mx-auto p-5">
+            <h1 className="flex flex-col items-center justify-center">
+              <span className="text-4xl font-semibold text-center text-white">
+                查理 Repair 當面維修
+              </span>
+              <span className="text-base text-center mt-2">
+                Apple iPhone iPad 維修 - 林口 iPhone 維修
+              </span>
+            </h1>
+          </section>
+          <Feature />
+          <Service />
+          <section className="container mx-auto p-5">
+            <h2 className="text-2xl font-semibold text-center">地址 & 電話</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
+              <Link
+                href="https://maps.app.goo.gl/wjADk7ahCG3MCvrB6"
+                target="_blank"
+                className="sm:text-balance rounded-xl bg-slate-300/10 p-5 sm:p-10 text-center flex items-center gap-5 justify-center transition hover:bg-slate-300/20 hover:scale-105"
+              >
+                <span className="w-fit">
+                  林口iPhone維修 - 2樓查理 Repair <br />
+                  333桃園市龜山區復興北路8號2樓
+                </span>
+                <MapPin className="flex-none" />
+              </Link>
+              <Link
+                href="tel:0987654321"
+                className="rounded-xl bg-slate-300/10 p-5 sm:p-10 text-center flex items-center gap-3 justify-center transition hover:bg-slate-300/20 hover:scale-105"
+              >
+                <span className="w-fit text-2xl tabular-nums font-semibold">
+                  0987654321
+                </span>
+                <PhoneCall className="flex-none" />
+              </Link>
+            </div>
+          </section>
+          <footer className="container mx-auto p-5 pb-10">
+            <p className="text-center text-balance text-xs">
+              &copy; Copyright 2024 查理 Repair 當面維修
+            </p>
+          </footer>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }
