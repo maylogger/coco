@@ -54,7 +54,7 @@ const ItemVariants = {
 
 const Service = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5 });
+  const isInView = useInView(ref, { amount: 0.5, once: true });
 
   return (
     <section className="container mx-auto p-5">
