@@ -1,10 +1,10 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { MapPin, PhoneCall } from "lucide-react";
+import { MapPin, PhoneCall } from 'lucide-react'
 
-import Header from "./header";
-import Feature from "./feature";
-import Service from "./service";
+import Header from './header'
+import Feature from './feature'
+import Service from './service'
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
                 查理 Repair <span className="inline-block">當面維修</span>
               </span>
               <span className="text-lg text-center mt-2">
-                Apple iPhone iPad 維修 -{" "}
+                Apple iPhone iPad 維修 -{' '}
                 <span className="inline-block">林口 iPhone 維修</span>
               </span>
             </h1>
@@ -34,20 +34,20 @@ export default function Home() {
                 target="_blank"
                 className="sm:text-balance rounded-xl bg-slate-300/10 p-5 sm:p-10 text-center flex items-center gap-5 justify-center transition hover:bg-slate-300/20 hover:scale-105"
               >
+                <MapPin className="flex-none" />
                 <span className="w-fit">
                   林口iPhone維修 - 2樓查理 Repair <br />
                   333桃園市龜山區復興北路8號2樓
                 </span>
-                <MapPin className="flex-none" />
               </Link>
               <Link
-                href="tel:0987654321"
-                className="rounded-xl bg-slate-300/10 p-5 sm:p-10 text-center flex items-center gap-3 justify-center transition hover:bg-slate-300/20 hover:scale-105"
+                href="tel:+886917008861"
+                className="rounded-xl bg-slate-300/10 p-5 sm:p-10 text-center flex items-center gap-5 justify-center transition hover:bg-slate-300/20 hover:scale-105"
               >
-                <span className="w-fit text-2xl tabular-nums font-semibold">
-                  0987654321
-                </span>
                 <PhoneCall className="flex-none" />
+                <span className="w-fit text-2xl tabular-nums font-semibold">
+                  0917-008-861
+                </span>
               </Link>
             </div>
           </section>
@@ -59,5 +59,5 @@ export default function Home() {
         </div>
       </div>
     </>
-  );
+  )
 }
